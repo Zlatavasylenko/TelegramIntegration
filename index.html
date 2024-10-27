@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.ibb.co/GP3dyzw/IMG-6199.jpg">
+    <title>Frontend-кейс</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form class="form" onsubmit="sendEmailTelegram(event)">
+            <h3>Інформація відправника</h3>
+            <div class="form__group">
+                <label for="name">Ім'я</label>
+                <input type="text" name="name" autocomplete="off" maxlength="50" placeholder="Введіть ваше ім'я"
+                    required>
+
+                <label for="gender">Стать</label>
+                <select name="gender" required>
+                    <option value="" disabled selected>Оберіть стать</option>
+                    <option value="Чоловіча">Чоловіча</option>
+                    <option value="Жіноча">Жіноча</option>
+                </select>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" autocomplete="off" maxlength="50" placeholder="example@mail.com"
+                    required>
+
+                <label for="phone">Номер телефону</label>
+                <input type="tel" name="phone" autocomplete="off" maxlength="15" placeholder="+380123456789" required>
+            </div>
+            <div class="form__submit-block">
+                <div class="form__submit-button">
+                    <button type="submit">Відправити</button>
+                </div>
+            </div>
+            <div class="form__send-result"></div>
+        </form>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
